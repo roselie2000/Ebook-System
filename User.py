@@ -8,7 +8,7 @@ import webbrowser as wb
 class User:
     def __init__(self):
 
-        self.con = mysql.connector.connect(host="localhost", user="root", password="Roselie@2000", database="ebooks")
+        self.con = mysql.connector.connect(host="localhost", user="root", password="yourpassword", database="yourdatabase")
         self.cur = self.con.cursor()
 
     def tkin2(self):
@@ -18,8 +18,8 @@ class User:
         self.pwd = tk.StringVar()
         self.root2.title("User")
         self.root2.geometry('500x400')
-        self.root2.iconbitmap('C:/image/book_icon.ico')
-        bg = tk.PhotoImage(file="C:/image/background1.png")
+        self.root2.iconbitmap('picturelocation.ico')
+        bg = tk.PhotoImage(file="picturelocation.png")
         self.label1 = tk.Label(self.root2, image=bg)
         self.label1.place(x=0, y=0)
         self.userlab5 = ttk.Label(self.root2,text = "Email :", background="#61626B", font=("Times",14,"bold italic"), foreground="white").grid(row=3, column=0,pady=5)
@@ -62,14 +62,13 @@ class User:
 
     def view(self):
         self.root2.destroy()
-        # self.root3.destroy()
 
         #create tkinter window
         self.bkwin = tk.Tk()
         self.search = tk.StringVar()
         self.bkwin.geometry("800x500")
         self.bkwin.title("Books")
-        self.bkwin.iconbitmap('C:/image/book_icon.ico')
+        self.bkwin.iconbitmap('picturelocation.ico')
         self.bkwin.config(bg="#D8BB71")
 
         #create database connectivity
@@ -98,7 +97,7 @@ class User:
         self.bkwin1 = tk.Tk()
         self.bkwin1.geometry("800x500")
         self.bkwin1.title("Books")
-        self.bkwin1.iconbitmap('C:/image/book_icon.ico')
+        self.bkwin1.iconbitmap('picturelocation.ico')
         self.bkwin1.config(bg="#D8BB71")
         data = self.search.get()
         data = self.search.get()
