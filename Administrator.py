@@ -7,9 +7,9 @@ import mysql.connector
 
 class Administrator:
     def __init__(self):
-        self.__Username = "101RGG"
-        self.__Password = "Rose2000"
-        self.con = mysql.connector.connect(host="localhost", port=3306, user="root", password="Roselie@2000", database="Ebooks")
+        self.__Username = "any username"
+        self.__Password = "any password"
+        self.con = mysql.connector.connect(host="localhost", port=3306, user="root", password="yourpassword", database="yourdatabase")
         self.cur = self.con.cursor()
 
     def tkin1(self):
@@ -18,8 +18,8 @@ class Administrator:
         self.pwd = tk.StringVar()
         self.root.title("Administrator")
         self.root.geometry('500x300')
-        self.root.iconbitmap('C:/image/book_icon.ico')
-        bg = tk.PhotoImage(file="C:/image/background1.png")
+        self.root.iconbitmap('picturelocation.ico')
+        bg = tk.PhotoImage(file="picturelocation.png")
         self.label1 = tk.Label(self.root, image=bg)
         self.label1.place(x=0, y=0)
 
@@ -56,8 +56,8 @@ class Administrator:
         self.book = tk.StringVar()
         self.root1.title("Book Updation")
         self.root1.geometry("500x500")
-        self.root1.iconbitmap('C:/image/book_icon.ico')
-        bg = tk.PhotoImage(file="C:/image/background2.png")
+        self.root1.iconbitmap('picturelocation.ico')
+        bg = tk.PhotoImage(file="picturelocation.png")
         self.label1 = tk.Label(self.root1, image=bg)
         self.label1.place(x=0, y=0)
 
@@ -122,7 +122,7 @@ class Administrator:
         self.bkwin = tk.Tk()
         self.bkwin.geometry("800x500")
         self.bkwin.title("Books")
-        self.bkwin.iconbitmap('C:/image/book_icon.ico')
+        self.bkwin.iconbitmap('picturelocation.ico')
         self.bkwin.config(bg="#D8BB71")
 
         #create database connectivity
